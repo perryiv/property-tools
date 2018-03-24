@@ -43,7 +43,7 @@ it ( "The version should be correct", function()
 {
   const major = 0;
   const minor = 1;
-  const patch = 0;
+  const patch = 1;
 
   // Test the function.
   assert.deepEqual ( getVersion(), { major: major, minor: minor, patch: patch } );
