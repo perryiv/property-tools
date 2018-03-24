@@ -41,12 +41,13 @@ To automatically lint, build, and test whenever you edit the code, do this:
 
 ## Using
 
-The package exports three functions:
+The package exports these functions:
 
     const {
-      getVersion,
       getProperty,
-      requireProperty
+      setProperty,
+      requireProperty,
+      getVersion
     } = require ( "property-tools" );
 
 #### Get Version

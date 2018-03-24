@@ -17,8 +17,9 @@
     "url": "https://github.com/perryiv/property-tools.git"
   },
   "keywords": [
-    "require",
-    "get",
+    "getProperty",
+    "requireProperty",
+    "setProperty",
     "property",
     "properties"
   ],

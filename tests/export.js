@@ -10,7 +10,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 //
-//  Test the function for getting the version.
+//  Make sure the correct functions are exported.
 //
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -18,8 +18,12 @@
 
 "use strict";
 
-const { getVersion } = require ( "../source/main" );
-const { version } = require ( "../package.json" );
+const {
+  getProperty,
+  requireProperty,
+  setProperty,
+  getVersion
+} = require ( "../source/main" );
 
 const { assert } = require ( "chai" );
 
@@ -30,26 +34,33 @@ const { assert } = require ( "chai" );
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-describe ( "Version", function() {
+describe ( "Export", function() {
 
 
 ////////////////////////////////////////////////////////////////////////////////
 //
-//  Test the function.
+//  These functions should be exported.
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-it ( "The version should be correct", function()
+it ( "Should export getProperty", function()
 {
-  const major = 0;
-  const minor = 1;
-  const patch = 0;
+  assert.ok ( "function" === ( typeof getProperty ) );
+} );
 
-  // Test the function.
-  assert.deepEqual ( getVersion(), { major: major, minor: minor, patch: patch } );
+it ( "Should export setProperty", function()
+{
+  assert.ok ( "function" === ( typeof setProperty ) );
+} );
 
-  // Make sure we're consistent with the package.
-  assert.deepEqual ( version, ( major + "." + minor + "." + patch ) );
+it ( "Should export requireProperty", function()
+{
+  assert.ok ( "function" === ( typeof requireProperty ) );
+} );
+
+it ( "Should export getVersion", function()
+{
+  assert.ok ( "function" === ( typeof getVersion ) );
 } );
 
 
