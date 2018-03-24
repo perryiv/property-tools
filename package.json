@@ -1,0 +1,41 @@
+{
+  "name": "property-tools",
+  "version": "0.1.0",
+  "description": "Functions for getting, setting, and requiring both shallow and deep properties of an object",
+  "main": "source/main.js",
+  "scripts": {
+    "build": "webpack",
+    "build-min": "webpack",
+    "build-test": "webpack",
+    "lint": "eslint . --ext .js",
+    "server": "http-server",
+    "test": "nyc mocha --bail --no-timeouts tests/main.js",
+    "watch": "grunt watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/perryiv/property-tools.git"
+  },
+  "keywords": [
+    "require",
+    "get",
+    "property",
+    "properties"
+  ],
+  "author": "Perry L Miller IV",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "eslint": "^4.19.0",
+    "grunt": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-run": "^0.8.0",
+    "http-server": "^0.11.1",
+    "mocha": "^5.0.4",
+    "nyc": "^11.6.0",
+    "watch": "^1.0.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  }
+}

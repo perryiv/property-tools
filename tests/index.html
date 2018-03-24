@@ -1,0 +1,59 @@
+<!--
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) 2018, ESI Group
+//  All rights reserved.
+//
+//  Author: Perry L Miller IV
+//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Configure mocha and run the tests.
+//  See: https://mochajs.org/#browser-specific-methods
+//
+////////////////////////////////////////////////////////////////////////////////
+-->
+
+<html>
+
+<head>
+
+  <!-- Our page title. -->
+  <meta charset="utf-8">
+  <title>Tests for property-tools package</title>
+
+  <!-- Add the mocha styles. -->
+  <link href="../node_modules/mocha/mocha.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <!-- Mocha needs this. -->
+  <div id="mocha"></div>
+
+  <!-- Add mocha and set it for behavior-driven development. -->
+  <script src="../node_modules/mocha/mocha.js"></script>
+  <script> mocha.setup ( "bdd" ) </script>
+
+  <!-- Add the package. -->
+  <script src="../build/property-tools-1.0.0.min.js"> </script>
+
+  <!-- Add our main test file. -->
+  <script src="../build/test.js"> </script>
+
+  <!-- Finish configuring mocha and start it. -->
+  <script>
+    mocha.checkLeaks();
+    mocha.globals ( [ "LiveReload" ] );
+    mocha.run();
+  </script>
+
+  <!-- Automatically reload when files change. -->
+  <script src="//localhost:35742/livereload.js"></script>
+
+</body>
+
+</html>
