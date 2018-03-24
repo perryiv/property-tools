@@ -1,6 +1,6 @@
 # Property Tools
 
-This module contains helper functions for getting and requiring properties in objects.
+This module contains helper functions for getting, setting, and requiring both shallow and deep properties in objects.
 
 ## Building
 
