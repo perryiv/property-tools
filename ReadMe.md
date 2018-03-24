@@ -81,8 +81,7 @@ Requiring a property that exists:
 
 Requiring a property that does not exist will throw an exception:
 
-    const a = { b: 1 };
-    expect ( function() { requireProperty ( a, "c" ); } )
+    expect ( function() { requireProperty ( { b: 1 }, "c" ); } )
       .to.throw ( Error, "Property 'c' not in object" );
 
 Requiring a property from an invalid container object will throw an exception:
