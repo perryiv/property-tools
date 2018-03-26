@@ -47,6 +47,16 @@ it ( "The version should be correct", function()
   const minor = parseInt ( va[1] );
   const patch = parseInt ( va[2] );
 
+  // Make sure they are numbers.
+  assert.ok ( "number" === ( typeof major ) );
+  assert.ok ( "number" === ( typeof minor ) );
+  assert.ok ( "number" === ( typeof patch ) );
+
+  // Make sure they are not negative numbers.
+  assert.ok ( major >= 0 );
+  assert.ok ( minor >= 0 );
+  assert.ok ( patch >= 0 );
+
   // Test the function.
   assert.deepEqual ( getVersion(), { major: major, minor: minor, patch: patch } );
 
