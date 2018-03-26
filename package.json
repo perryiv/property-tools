@@ -1,6 +1,6 @@
 {
   "name": "property-tools",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Functions for getting, setting, and requiring both shallow and deep properties of an object",
   "main": "source/main.js",
   "scripts": {
