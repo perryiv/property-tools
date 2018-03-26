@@ -17,6 +17,7 @@
 
 "use strict";
 
+const { getSpeedTestConfig } = require ( "./helpers" );
 const { getProperty } = require ( "../source/main" );
 
 const { assert, expect } = require ( "chai" );
@@ -114,13 +115,12 @@ describe ( "Should be fast when ...", function()
 {
   const a = { b: 1, c: "hi", d: { e: 10 } };
 
-  const num = 1e6;
-  const allowedTime = 50;
+  const { numIterations, allowedTime } = getSpeedTestConfig();
 
   it ( "Getting shallow properties that exist", function()
   {
     const startTime = Date.now();
-    for ( let i = 0; i < num; ++i )
+    for ( let i = 0; i < numIterations; ++i )
     {
       getProperty ( a, "b" );
     }
@@ -130,7 +130,7 @@ describe ( "Should be fast when ...", function()
   it ( "Getting shallow properties that do not exist", function()
   {
     const startTime = Date.now();
-    for ( let i = 0; i < num; ++i )
+    for ( let i = 0; i < numIterations; ++i )
     {
       getProperty ( a, "bb" );
     }
@@ -140,7 +140,7 @@ describe ( "Should be fast when ...", function()
   it ( "Getting shallow properties from invalid container object", function()
   {
     const startTime = Date.now();
-    for ( let i = 0; i < num; ++i )
+    for ( let i = 0; i < numIterations; ++i )
     {
       getProperty ( null, "p" );
     }

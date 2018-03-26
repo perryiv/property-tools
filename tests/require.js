@@ -18,6 +18,7 @@
 
 "use strict";
 
+const { getSpeedTestConfig } = require ( "./helpers" );
 const { requireProperty } = require ( "../source/main" );
 
 const { assert, expect } = require ( "chai" );
@@ -95,13 +96,12 @@ describe ( "Should be fast when ...", function()
 {
   const a = { b: 1, c: "hi", d: { e: 10 } };
 
-  const num = 1e6;
-  const allowedTime = 50;
+  const { numIterations, allowedTime } = getSpeedTestConfig();
 
   it ( "Requiring properties that exist", function()
   {
     const startTime = Date.now();
-    for ( let i = 0; i < num; ++i )
+    for ( let i = 0; i < numIterations; ++i )
     {
       requireProperty ( a, "b" );
     }

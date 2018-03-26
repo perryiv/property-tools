@@ -23,6 +23,22 @@ const { assert } = require ( "chai" );
 
 ////////////////////////////////////////////////////////////////////////////////
 //
+//  Return the number of iterations to use in the speed tests and the
+//  amount of time allowed.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+const getSpeedTestConfig = function ()
+{
+  return {
+    numIterations: 1e6,
+    allowedTime: 60
+  };
+};
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
 //  Similar to requireProperty() but allows values of undefined.
 //  It also makes a copy.
 //
@@ -50,5 +66,6 @@ const requireAndCopyProperty = function ( container, name )
 ////////////////////////////////////////////////////////////////////////////////
 
 module.exports = {
+  getSpeedTestConfig,
   requireAndCopyProperty
 };
