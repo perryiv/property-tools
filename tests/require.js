@@ -105,7 +105,7 @@ describe ( "Should be fast when ...", function()
     {
       requireProperty ( a, "b" );
     }
-    assert.ok ( ( Date.now() - startTime ) < allowedTime );
+    expect ( Date.now() - startTime ).to.be.below ( allowedTime );
   } );
 
   // The other two cases:

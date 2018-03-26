@@ -19,7 +19,7 @@
 
 const { getProperty } = require ( "../source/main" );
 
-const { assert } = require ( "chai" );
+const { assert, expect } = require ( "chai" );
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -124,7 +124,7 @@ describe ( "Should be fast when ...", function()
     {
       getProperty ( a, "b" );
     }
-    assert.ok ( ( Date.now() - startTime ) < allowedTime );
+    expect ( Date.now() - startTime ).to.be.below ( allowedTime );
   } );
 
   it ( "Getting shallow properties that do not exist", function()
@@ -134,7 +134,7 @@ describe ( "Should be fast when ...", function()
     {
       getProperty ( a, "bb" );
     }
-    assert.ok ( ( Date.now() - startTime ) < allowedTime );
+    expect ( Date.now() - startTime ).to.be.below ( allowedTime );
   } );
 
   it ( "Getting shallow properties from invalid container object", function()
@@ -144,7 +144,7 @@ describe ( "Should be fast when ...", function()
     {
       getProperty ( null, "p" );
     }
-    assert.ok ( ( Date.now() - startTime ) < allowedTime );
+    expect ( Date.now() - startTime ).to.be.below ( allowedTime );
   } );
 } );
 
