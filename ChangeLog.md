@@ -12,7 +12,7 @@ project and uses
 - Renamed npm script ``build-test`` to ``build-browser-test`` because it is just for the browser.
 - Changed ``package.json`` files property so that ``source/banner.txt`` is not included in the package, and the ``dist`` folder is.
 - Using ``webpack.DefinePlugin`` to define ``IS_BROWSER_BUILD`` so that the test code in ``test.js`` gets the functions from the global PropertyTools object.
--- Increased allowed time for speed tests to 100 milliseconds because the tests fail too frequently on Travis CI.
+- Increased allowed time for speed tests to 100 milliseconds because the tests fail too frequently on Travis CI.
 
 ## 0.1.3 -- 2018-03-26
 
