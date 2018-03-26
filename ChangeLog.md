@@ -5,7 +5,7 @@ This changelog is inspired by the
 project and uses
 [Semantic Versioning](https://semver.org/).
 
-## Unreleased
+## 0.1.3 -- 2018-03-26
 
 - Combined several npm scripts into one.
 - Added this changelog file.
