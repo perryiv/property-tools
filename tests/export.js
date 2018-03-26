@@ -23,7 +23,7 @@ const {
   requireProperty,
   setProperty,
   getVersion
-} = require ( "../source/main" );
+} = require ( "./entry" );
 
 const { assert } = require ( "chai" );
 

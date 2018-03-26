@@ -19,7 +19,7 @@
 "use strict";
 
 const { requireAndCopyProperty } = require ( "./helpers" );
-const { setProperty } = require ( "../source/main" );
+const { setProperty } = require ( "./entry" );
 
 const { assert, expect } = require ( "chai" );
 

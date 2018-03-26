@@ -18,7 +18,7 @@
 
 "use strict";
 
-const { getVersion } = require ( "../source/main" );
+const { getVersion } = require ( "./entry" );
 const { version } = require ( "../package.json" );
 
 const { assert } = require ( "chai" );

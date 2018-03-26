@@ -6,12 +6,12 @@
   "scripts": {
     "build": "webpack",
     "build-min": "webpack",
-    "build-test": "webpack",
+    "build-browser-test": "webpack",
     "lint": "eslint . --ext .js",
     "server": "http-server",
     "test": "nyc mocha --bail --no-timeouts tests/main.js",
     "watch": "grunt watch",
-    "all": "npm run lint; npm run build; npm run build-min; npm run build-test; npm run test"
+    "all": "rm -f build/* dist/* && npm run lint && npm run build && npm run build-min && npm run build-browser-test && npm run test && mkdir -p dist && cp build/property* dist/"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,8 @@
   "author": "Perry L Miller IV",
   "license": "MIT",
   "files": [
-    "source"
+    "dist/property*",
+    "source/**/*.js"
   ],
   "devDependencies": {
     "chai": "^4.1.2",

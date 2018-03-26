@@ -19,7 +19,7 @@
 "use strict";
 
 const { getSpeedTestConfig } = require ( "./helpers" );
-const { requireProperty } = require ( "../source/main" );
+const { requireProperty } = require ( "./entry" );
 
 const { assert, expect } = require ( "chai" );
 

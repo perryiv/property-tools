@@ -56,7 +56,7 @@ else if ( "build-min" == command )
   } ) );
 }
 
-else if ( "build-test" == command )
+else if ( "build-browser-test" == command )
 {
   output = {
     path: __dirname + "/build/",
@@ -81,6 +81,10 @@ let banner = fs.readFileSync ( "./source/banner.txt", { encoding: "utf8" } );
 banner = banner.replace ( "[version]", npmConfigFile.version );
 banner = banner.replace ( "[description]", npmConfigFile.description );
 plugins.push ( new webpack.BannerPlugin ( { banner: banner, raw: true } ) );
+
+plugins.push ( new webpack.DefinePlugin ( {
+  IS_BROWSER_BUILD: true
+} ) );
 
 const config = {
   mode: "development",
