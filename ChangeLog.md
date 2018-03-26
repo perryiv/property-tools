@@ -5,6 +5,15 @@ This changelog is inspired by the
 project and uses
 [Semantic Versioning](https://semver.org/).
 
+# Unreleased
+
+- Updated ``npm run all`` to remove the existing files from the ``build`` and ``dist`` folders before it lints, builds, and tests (in the shell). If all that succeeds then it copies the distribution files from ``build`` to ``dist``.
+- Updated grunt and Travis config files to use ``npm run all``.
+- Renamed npm script ``build-test`` to ``build-browser-test`` because it is just for the browser.
+- Changed ``package.json`` files property so that ``source/banner.txt`` is not included in the package, and the ``dist`` folder is.
+- Using ``webpack.DefinePlugin`` to define ``IS_BROWSER_BUILD`` so that the test code in ``test.js`` gets the functions from the global PropertyTools object.
+
+
 ## 0.1.3 -- 2018-03-26
 
 - Combined several npm scripts into one.
