@@ -7,6 +7,8 @@ project and uses
 
 ## Unreleased
 
+- Combined several npm scripts into one.
+- Added this changelog file.
 - Added a config file for
 [Travis CI](https://travis-ci.org/perryiv/property-tools/).
 - Updated the function ``getVersion()`` to now get its information directly from the ``package.json`` file.
