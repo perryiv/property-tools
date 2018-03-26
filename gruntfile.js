@@ -35,11 +35,7 @@ module.exports = function ( grunt )
 
   // The tasks to run.
   var tasks = [
-    "run:lint",
-    "run:build",
-    "run:build-min",
-    "run:build-test",
-    "run:test"
+    "run:all"
   ];
 
   // All configuration goes here

@@ -10,7 +10,8 @@
     "lint": "eslint . --ext .js",
     "server": "http-server",
     "test": "nyc mocha --bail --no-timeouts tests/main.js",
-    "watch": "grunt watch"
+    "watch": "grunt watch",
+    "all": "npm run lint; npm run build; npm run build-min; npm run build-test; npm run test"
   },
   "repository": {
     "type": "git",
