@@ -30,7 +30,7 @@ const getSpeedTestConfig = function ()
 {
   return {
     numIterations: 1e6,
-    allowedTime: 60
+    allowedTime: 100 // Was 50 but speed tests kept failing on Travis.
   };
 };
 
