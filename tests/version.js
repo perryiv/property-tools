@@ -41,9 +41,11 @@ describe ( "Version", function() {
 
 it ( "The version should be correct", function()
 {
-  const major = 0;
-  const minor = 1;
-  const patch = 1;
+  // Get the version as separate numbers.
+  const va = version.split ( "." );
+  const major = parseInt ( va[0] );
+  const minor = parseInt ( va[1] );
+  const patch = parseInt ( va[2] );
 
   // Test the function.
   assert.deepEqual ( getVersion(), { major: major, minor: minor, patch: patch } );

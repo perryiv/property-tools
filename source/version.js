@@ -16,6 +16,19 @@
 
 "use strict";
 
+const version = require ( "../package.json" ).version.split ( "." );
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Get the version as separate numbers.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+const major = parseInt ( version[0] );
+const minor = parseInt ( version[1] );
+const patch = parseInt ( version[2] );
+
 
 ////////////////////////////////////////////////////////////////////////////////
 /**
@@ -27,9 +40,9 @@
 const getVersion = function()
 {
   return {
-    major: 0,
-    minor: 1,
-    patch: 1
+    major: major,
+    minor: minor,
+    patch: patch
   };
 };
 
