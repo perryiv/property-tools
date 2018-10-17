@@ -28,7 +28,7 @@ else
 {
   /* eslint-disable no-undef */
 
-  // We're in a browser so return the global object that were separately
+  // We're in a browser so return the global object that was separately
   // included with the distribution file.
   module.exports = PropertyTools;
 

@@ -16,6 +16,8 @@
 
 "use strict";
 
+const { callErrorHandler } = require ( "./errors" );
+
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -81,7 +83,8 @@ const setDeepProperty = function ( container, keys, value )
   const num = keys.length;
   if ( num <= 0 )
   {
-    throw new Error ( "Array of property names is empty" );
+    callErrorHandler ( "Array of property names is empty" );
+    return;
   }
 
   // The current container.
@@ -97,7 +100,8 @@ const setDeepProperty = function ( container, keys, value )
     // Make sure the key is valid.
     if ( !isValidKey ( key ) )
     {
-      throw new Error ( "Invalid name at position " + i + " when setting property" );
+      callErrorHandler ( "Invalid name at position " + i + " when setting property" );
+      return;
     }
 
     // Create the property if we need to.
@@ -125,7 +129,8 @@ const setDeepProperty = function ( container, keys, value )
   // Make sure it is valid.
   if ( !isValidKey ( last ) )
   {
-    throw new Error ( "Invalid name at position " + stop + " when setting property" );
+    callErrorHandler ( "Invalid name at position " + stop + " when setting property" );
+    return;
   }
 
   // Set the property corresponding to the last key.
@@ -147,7 +152,8 @@ const setProperty = function ( container, name, value )
   // Check the container.
   if ( !isValidContainer ( container ) )
   {
-    throw new Error ( "Invalid container given when setting property" );
+    callErrorHandler ( "Invalid container given when setting property" );
+    return;
   }
 
   // If the name is an array then call the other function.
@@ -159,7 +165,8 @@ const setProperty = function ( container, name, value )
   // Make sure the name is valid.
   if ( !isValidKey ( name ) )
   {
-    throw new Error ( "Invalid name when setting property" );
+    callErrorHandler ( "Invalid name when setting property" );
+    return;
   }
 
   // Set the property.

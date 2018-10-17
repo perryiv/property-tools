@@ -22,3 +22,4 @@ require ( "./version" );
 require ( "./get" );
 require ( "./require" );
 require ( "./set" );
+require ( "./errors" );

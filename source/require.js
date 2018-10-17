@@ -16,6 +16,8 @@
 
 "use strict";
 
+const { callErrorHandler } = require ( "./errors" );
+
 
 ////////////////////////////////////////////////////////////////////////////////
 /**
@@ -34,13 +36,15 @@ const requireProperty = function ( container, name )
   // Do not check this because name could be 0 (zero).
   //if ( !name )
   //{
-  //  throw new Error ( "Invalid name");
+  //  callErrorHandler ( "Invalid name" );
+  //  return;
   //}
 
   // We need a valid container object.
   if ( !container )
   {
-    throw new Error ( "Invalid container object" );
+    callErrorHandler ( "Invalid container object" );
+    return;
   }
 
   // According to this page:
@@ -52,7 +56,7 @@ const requireProperty = function ( container, name )
     return value;
   }
 
-  throw new Error ( "Property '" + name + "' not in object" );
+  callErrorHandler ( "Property '" + name + "' not in object" );
 };
 
 

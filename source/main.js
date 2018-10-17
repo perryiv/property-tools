@@ -24,8 +24,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 module.exports = Object.assign ( {},
-  require ( "./get.js" ),
-  require ( "./require.js" ),
-  require ( "./set.js" ),
-  require ( "./version.js" )
+  require ( "./errors" ),
+  require ( "./get" ),
+  require ( "./require" ),
+  require ( "./set" ),
+  require ( "./version" )
 );

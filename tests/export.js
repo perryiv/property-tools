@@ -22,6 +22,9 @@ const {
   getProperty,
   requireProperty,
   setProperty,
+  getErrorHandler,
+  setErrorHandler,
+  callErrorHandler,
   getVersion
 } = require ( "./entry" );
 
@@ -56,6 +59,21 @@ it ( "Should export setProperty", function()
 it ( "Should export requireProperty", function()
 {
   assert.ok ( "function" === ( typeof requireProperty ) );
+} );
+
+it ( "Should export getErrorHandler", function()
+{
+  assert.ok ( "function" === ( typeof getErrorHandler ) );
+} );
+
+it ( "Should export setErrorHandler", function()
+{
+  assert.ok ( "function" === ( typeof setErrorHandler ) );
+} );
+
+it ( "Should export callErrorHandler", function()
+{
+  assert.ok ( "function" === ( typeof callErrorHandler ) );
 } );
 
 it ( "Should export getVersion", function()

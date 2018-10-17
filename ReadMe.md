@@ -45,8 +45,11 @@ The package exports these functions:
 
     const {
       getProperty,
-      setProperty,
       requireProperty,
+      setProperty,
+      getErrorHandler,
+      setErrorHandler,
+      callErrorHandler,
       getVersion
     } = require ( "property-tools" );
 

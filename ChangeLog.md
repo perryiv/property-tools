@@ -5,6 +5,11 @@ This changelog is inspired by the
 project and uses
 [Semantic Versioning](https://semver.org/).
 
+## 0.2.0 -- 2018-10-15
+
+- Added functions for getting and setting a custom error handler. The default error handler just throws an exception, which was the previous behavior.
+-- Updated tests.
+
 ## 0.1.4 -- 2018-03-26
 
 - Updated ``npm run all`` to remove the existing files from the ``build`` and ``dist`` folders before it lints, builds, and tests (in the shell). If all that succeeds then it copies the distribution files from ``build`` to ``dist``.
